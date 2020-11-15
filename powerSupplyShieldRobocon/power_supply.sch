@@ -1,0 +1,602 @@
+EESchema Schematic File Version 4
+LIBS:power_supply-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5DD66F73
+P 3250 2700
+F 0 "J1" H 3170 2375 50  0000 C CNN
+F 1 "Conn_01x02" H 3170 2466 50  0000 C CNN
+F 2 "modFiles:Solar_Connector" H 3250 2700 50  0001 C CNN
+F 3 "~" H 3250 2700 50  0001 C CNN
+	1    3250 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5DD66FE4
+P 3550 2900
+F 0 "#PWR0101" H 3550 2650 50  0001 C CNN
+F 1 "GND" H 3555 2727 50  0000 C CNN
+F 2 "" H 3550 2900 50  0001 C CNN
+F 3 "" H 3550 2900 50  0001 C CNN
+	1    3550 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 2700 3550 2700
+Wire Wire Line
+	3450 2600 3800 2600
+Wire Notes Line
+	8750 1950 8750 5350
+Wire Notes Line
+	2800 5350 2800 1950
+$Comp
+L Device:CP1 C1
+U 1 1 5DD67310
+P 3800 2850
+F 0 "C1" H 3915 2896 50  0000 L CNN
+F 1 "CP1" H 3915 2805 50  0000 L CNN
+F 2 "modFiles:Capacitor_1000uF" H 3800 2850 50  0001 C CNN
+F 3 "~" H 3800 2850 50  0001 C CNN
+	1    3800 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2600 3800 2700
+Connection ~ 3800 2600
+$Comp
+L power:GND #PWR0102
+U 1 1 5DD676CD
+P 3800 3150
+F 0 "#PWR0102" H 3800 2900 50  0001 C CNN
+F 1 "GND" H 3805 2977 50  0000 C CNN
+F 2 "" H 3800 3150 50  0001 C CNN
+F 3 "" H 3800 3150 50  0001 C CNN
+	1    3800 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3000 3800 3150
+$Comp
+L Device:R R1
+U 1 1 5DD679D3
+P 7300 3150
+F 0 "R1" H 7370 3196 50  0000 L CNN
+F 1 "R" H 7370 3105 50  0000 L CNN
+F 2 "modFiles:Resistor_small" V 7230 3150 50  0001 C CNN
+F 3 "~" H 7300 3150 50  0001 C CNN
+	1    7300 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5DD67B2C
+P 7700 3150
+F 0 "D1" V 7738 3033 50  0000 R CNN
+F 1 "LED" V 7647 3033 50  0000 R CNN
+F 2 "modFiles:LED_D3.0mm" H 7700 3150 50  0001 C CNN
+F 3 "~" H 7700 3150 50  0001 C CNN
+	1    7700 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7450 3150 7550 3150
+$Comp
+L power:GND #PWR0105
+U 1 1 5DD67CA8
+P 7900 3150
+F 0 "#PWR0105" H 7900 2900 50  0001 C CNN
+F 1 "GND" H 7905 2977 50  0000 C CNN
+F 2 "" H 7900 3150 50  0001 C CNN
+F 3 "" H 7900 3150 50  0001 C CNN
+	1    7900 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7850 3150 7900 3150
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J10
+U 1 1 5DD68FAB
+P 7750 3800
+F 0 "J10" H 7800 4017 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 7800 3926 50  0000 C CNN
+F 2 "modFiles:Buck 5A" H 7750 3800 50  0001 C CNN
+F 3 "~" H 7750 3800 50  0001 C CNN
+	1    7750 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J2
+U 1 1 5DD68FE9
+P 3800 4800
+F 0 "J2" H 3850 5017 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 3850 4926 50  0000 C CNN
+F 2 "modFiles:Buck_Regulator" H 3800 4800 50  0001 C CNN
+F 3 "~" H 3800 4800 50  0001 C CNN
+	1    3800 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J8
+U 1 1 5DD6BAFF
+P 7750 4700
+F 0 "J8" H 7800 4917 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 7800 4826 50  0000 C CNN
+F 2 "modFiles:Buck_Regulator" H 7750 4700 50  0001 C CNN
+F 3 "~" H 7750 4700 50  0001 C CNN
+	1    7750 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse F3
+U 1 1 5DD6BB73
+P 8200 3800
+F 0 "F3" V 8397 3800 50  0000 C CNN
+F 1 "Fuse" V 8306 3800 50  0000 C CNN
+F 2 "modFiles:Fuse_Holder" V 8130 3800 50  0001 C CNN
+F 3 "~" H 8200 3800 50  0001 C CNN
+	1    8200 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Fuse F2
+U 1 1 5DD6C06C
+P 7250 4700
+F 0 "F2" V 7447 4700 50  0000 C CNN
+F 1 "Fuse" V 7356 4700 50  0000 C CNN
+F 2 "modFiles:Fuse_Holder" V 7180 4700 50  0001 C CNN
+F 3 "~" H 7250 4700 50  0001 C CNN
+	1    7250 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Fuse F1
+U 1 1 5DD6C0CC
+P 3250 4800
+F 0 "F1" V 3447 4800 50  0000 C CNN
+F 1 "Fuse" V 3356 4800 50  0000 C CNN
+F 2 "modFiles:Fuse_Holder" V 3180 4800 50  0001 C CNN
+F 3 "~" H 3250 4800 50  0001 C CNN
+	1    3250 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5DD6CA40
+P 3500 5000
+F 0 "#PWR0107" H 3500 4750 50  0001 C CNN
+F 1 "GND" H 3505 4827 50  0000 C CNN
+F 2 "" H 3500 5000 50  0001 C CNN
+F 3 "" H 3500 5000 50  0001 C CNN
+	1    3500 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5DD6CA76
+P 8350 4650
+F 0 "#PWR0108" H 8350 4400 50  0001 C CNN
+F 1 "GND" H 8355 4477 50  0000 C CNN
+F 2 "" H 8350 4650 50  0001 C CNN
+F 3 "" H 8350 4650 50  0001 C CNN
+	1    8350 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5DD6CAAC
+P 8200 3900
+F 0 "#PWR0109" H 8200 3650 50  0001 C CNN
+F 1 "GND" H 8205 3727 50  0000 C CNN
+F 2 "" H 8200 3900 50  0001 C CNN
+F 3 "" H 8200 3900 50  0001 C CNN
+	1    8200 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 4900 3500 4900
+$Comp
+L power:GND #PWR0110
+U 1 1 5DD6DBAC
+P 4400 4800
+F 0 "#PWR0110" H 4400 4550 50  0001 C CNN
+F 1 "GND" H 4405 4627 50  0000 C CNN
+F 2 "" H 4400 4800 50  0001 C CNN
+F 3 "" H 4400 4800 50  0001 C CNN
+	1    4400 4800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5DD6DBD3
+P 7400 4800
+F 0 "#PWR0111" H 7400 4550 50  0001 C CNN
+F 1 "GND" H 7405 4627 50  0000 C CNN
+F 2 "" H 7400 4800 50  0001 C CNN
+F 3 "" H 7400 4800 50  0001 C CNN
+	1    7400 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5DD6DF18
+P 7450 3800
+F 0 "#PWR0112" H 7450 3550 50  0001 C CNN
+F 1 "GND" H 7455 3627 50  0000 C CNN
+F 2 "" H 7450 3800 50  0001 C CNN
+F 3 "" H 7450 3800 50  0001 C CNN
+	1    7450 3800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8050 3900 8200 3900
+Wire Wire Line
+	8050 4800 8150 4800
+Wire Wire Line
+	4200 4900 4100 4900
+Text Label 4200 4900 0    50   ~ 0
+3V3
+Text Label 8150 4800 0    50   ~ 0
+5V
+Text Label 7350 3900 2    50   ~ 0
+5A
+Text Label 5450 2900 2    50   ~ 0
+3V3
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5DD7200A
+P 5650 2250
+F 0 "J4" H 5730 2242 50  0000 L CNN
+F 1 "Conn_01x02" H 5730 2151 50  0000 L CNN
+F 2 "modFiles:screw_terminal" H 5650 2250 50  0001 C CNN
+F 3 "~" H 5650 2250 50  0001 C CNN
+	1    5650 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 5DD720B0
+P 5650 2600
+F 0 "J6" H 5730 2592 50  0000 L CNN
+F 1 "Conn_01x02" H 5730 2501 50  0000 L CNN
+F 2 "modFiles:screw_terminal" H 5650 2600 50  0001 C CNN
+F 3 "~" H 5650 2600 50  0001 C CNN
+	1    5650 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J7
+U 1 1 5DD720EC
+P 5650 2900
+F 0 "J7" H 5730 2892 50  0000 L CNN
+F 1 "Conn_01x02" H 5730 2801 50  0000 L CNN
+F 2 "modFiles:screw_terminal" H 5650 2900 50  0001 C CNN
+F 3 "~" H 5650 2900 50  0001 C CNN
+	1    5650 2900
+	1    0    0    -1  
+$EndComp
+Text Label 5450 2250 2    50   ~ 0
+main
+Text Label 5450 2600 2    50   ~ 0
+5V
+Text Label 5450 2350 2    50   ~ 0
+GND
+Text Label 5450 2700 2    50   ~ 0
+GND
+Text Label 5450 3000 2    50   ~ 0
+GND
+Text Label 8350 3800 0    50   ~ 0
+main
+Wire Notes Line
+	2800 5350 8750 5350
+Text Label 7100 4700 2    50   ~ 0
+main
+Text Label 3100 4800 2    50   ~ 0
+main
+Wire Wire Line
+	3550 2700 3550 2900
+$Comp
+L power:GND #PWR01
+U 1 1 5DD91553
+P 5600 4900
+F 0 "#PWR01" H 5600 4650 50  0001 C CNN
+F 1 "GND" H 5605 4727 50  0000 C CNN
+F 2 "" H 5600 4900 50  0001 C CNN
+F 3 "" H 5600 4900 50  0001 C CNN
+	1    5600 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3950 5600 3950
+Wire Wire Line
+	5600 3950 5600 4150
+Wire Wire Line
+	5850 4150 5600 4150
+Connection ~ 5600 4150
+Wire Wire Line
+	5600 4150 5600 4350
+Wire Wire Line
+	5850 4350 5600 4350
+Connection ~ 5600 4350
+Wire Wire Line
+	5600 4350 5600 4550
+Wire Wire Line
+	5850 4550 5600 4550
+Connection ~ 5600 4550
+Wire Wire Line
+	5600 4550 5600 4750
+Wire Wire Line
+	5850 4750 5600 4750
+Connection ~ 5600 4750
+Text Label 5800 4900 0    50   ~ 0
+3V3
+Wire Wire Line
+	5850 4050 5800 4050
+Wire Wire Line
+	5800 4050 5800 4250
+Wire Wire Line
+	5850 4250 5800 4250
+Connection ~ 5800 4250
+Wire Wire Line
+	5800 4250 5800 4450
+Wire Wire Line
+	5850 4450 5800 4450
+Connection ~ 5800 4450
+Wire Wire Line
+	5800 4450 5800 4650
+Wire Wire Line
+	5850 4650 5800 4650
+Connection ~ 5800 4650
+Wire Wire Line
+	5800 4650 5800 4900
+Text Label 4700 2550 0    50   ~ 0
+main
+$Comp
+L Device:D D2
+U 1 1 5DD9778E
+P 4550 2550
+F 0 "D2" H 4550 2334 50  0000 C CNN
+F 1 "D" H 4550 2425 50  0000 C CNN
+F 2 "modFiles:Diode_Medium" H 4550 2550 50  0001 C CNN
+F 3 "~" H 4550 2550 50  0001 C CNN
+	1    4550 2550
+	-1   0    0    1   
+$EndComp
+Wire Notes Line
+	6800 1950 6800 5350
+Wire Notes Line
+	6800 4350 8750 4350
+Wire Notes Line
+	8750 3400 6800 3400
+Wire Notes Line
+	4900 3700 6800 3700
+Wire Notes Line
+	4900 1950 4900 5350
+Wire Notes Line
+	2800 3800 4900 3800
+Wire Wire Line
+	5600 4900 5600 4750
+Wire Wire Line
+	7350 3900 7550 3900
+Wire Wire Line
+	7550 3800 7450 3800
+Wire Wire Line
+	3400 4800 3600 4800
+Wire Wire Line
+	3500 4900 3500 5000
+Wire Wire Line
+	7400 4700 7550 4700
+Wire Wire Line
+	7400 4800 7550 4800
+Wire Wire Line
+	8050 4700 8350 4700
+Wire Wire Line
+	8350 4700 8350 4650
+Wire Wire Line
+	4100 4800 4400 4800
+Wire Notes Line
+	2800 1950 8750 1950
+Wire Wire Line
+	3950 2600 3950 2550
+Wire Wire Line
+	3800 2600 3950 2600
+$Comp
+L Connector:Conn_01x05_Male J3
+U 1 1 5DDD681E
+P 6250 2550
+F 0 "J3" H 6356 2928 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 6356 2837 50  0000 C CNN
+F 2 "modFiles:JST_5_BIG" H 6250 2550 50  0001 C CNN
+F 3 "~" H 6250 2550 50  0001 C CNN
+	1    6250 2550
+	1    0    0    -1  
+$EndComp
+Text Label 6450 2350 0    50   ~ 0
+main
+Text Label 6450 2450 0    50   ~ 0
+5V
+Text Label 6450 2550 0    50   ~ 0
+5A
+Text Label 6450 2650 0    50   ~ 0
+3V3
+$Comp
+L power:GND #PWR0103
+U 1 1 5DDD6A50
+P 6600 2850
+F 0 "#PWR0103" H 6600 2600 50  0001 C CNN
+F 1 "GND" H 6605 2677 50  0000 C CNN
+F 2 "" H 6600 2850 50  0001 C CNN
+F 3 "" H 6600 2850 50  0001 C CNN
+	1    6600 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 2750 6600 2750
+Wire Wire Line
+	6600 2750 6600 2850
+$Comp
+L Device:LED D3
+U 1 1 5DDE7476
+P 7800 2150
+F 0 "D3" H 7792 1895 50  0000 C CNN
+F 1 "LED" H 7792 1986 50  0000 C CNN
+F 2 "modFiles:LED_D3.0mm" H 7800 2150 50  0001 C CNN
+F 3 "~" H 7800 2150 50  0001 C CNN
+	1    7800 2150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5DDE74FE
+P 7800 2550
+F 0 "D4" H 7792 2295 50  0000 C CNN
+F 1 "LED" H 7792 2386 50  0000 C CNN
+F 2 "modFiles:LED_D3.0mm" H 7800 2550 50  0001 C CNN
+F 3 "~" H 7800 2550 50  0001 C CNN
+	1    7800 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 5DDE753E
+P 7800 2850
+F 0 "D5" H 7792 2595 50  0000 C CNN
+F 1 "LED" H 7792 2686 50  0000 C CNN
+F 2 "modFiles:LED_D3.0mm" H 7800 2850 50  0001 C CNN
+F 3 "~" H 7800 2850 50  0001 C CNN
+	1    7800 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5DDE7617
+P 7250 2150
+F 0 "R2" V 7043 2150 50  0000 C CNN
+F 1 "R" V 7134 2150 50  0000 C CNN
+F 2 "modFiles:Resistor_small" V 7180 2150 50  0001 C CNN
+F 3 "~" H 7250 2150 50  0001 C CNN
+	1    7250 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5DDE76CC
+P 7250 2550
+F 0 "R3" V 7043 2550 50  0000 C CNN
+F 1 "R" V 7134 2550 50  0000 C CNN
+F 2 "modFiles:Resistor_small" V 7180 2550 50  0001 C CNN
+F 3 "~" H 7250 2550 50  0001 C CNN
+	1    7250 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5DDE771A
+P 7250 2850
+F 0 "R4" V 7043 2850 50  0000 C CNN
+F 1 "R" V 7134 2850 50  0000 C CNN
+F 2 "modFiles:Resistor_small" V 7180 2850 50  0001 C CNN
+F 3 "~" H 7250 2850 50  0001 C CNN
+	1    7250 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7400 2150 7650 2150
+Wire Wire Line
+	7400 2550 7650 2550
+Wire Wire Line
+	7400 2850 7650 2850
+$Comp
+L power:GND #PWR0104
+U 1 1 5DDE9314
+P 8050 2200
+F 0 "#PWR0104" H 8050 1950 50  0001 C CNN
+F 1 "GND" H 8055 2027 50  0000 C CNN
+F 2 "" H 8050 2200 50  0001 C CNN
+F 3 "" H 8050 2200 50  0001 C CNN
+	1    8050 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5DDE9352
+P 8050 2600
+F 0 "#PWR0106" H 8050 2350 50  0001 C CNN
+F 1 "GND" H 8055 2427 50  0000 C CNN
+F 2 "" H 8050 2600 50  0001 C CNN
+F 3 "" H 8050 2600 50  0001 C CNN
+	1    8050 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0113
+U 1 1 5DDE9389
+P 8050 2900
+F 0 "#PWR0113" H 8050 2650 50  0001 C CNN
+F 1 "GND" H 8055 2727 50  0000 C CNN
+F 2 "" H 8050 2900 50  0001 C CNN
+F 3 "" H 8050 2900 50  0001 C CNN
+	1    8050 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 2850 8050 2850
+Wire Wire Line
+	8050 2850 8050 2900
+Wire Wire Line
+	7950 2550 8050 2550
+Wire Wire Line
+	8050 2550 8050 2600
+Wire Wire Line
+	7950 2150 8050 2150
+Wire Wire Line
+	8050 2150 8050 2200
+Text Label 7100 2150 2    50   ~ 0
+5A
+Text Label 7100 2550 2    50   ~ 0
+5V
+Text Label 7100 2850 2    50   ~ 0
+3V3
+Wire Wire Line
+	3950 2550 4400 2550
+Text Label 7150 3150 2    50   ~ 0
+main
+$Comp
+L Connector:DB9_Female_MountingHoles J5
+U 1 1 5DDFB521
+P 6150 4350
+F 0 "J5" H 6330 4353 50  0000 L CNN
+F 1 "DB9_Female_MountingHoles" H 6330 4262 50  0000 L CNN
+F 2 "modFiles:Connector_DB_9" H 6150 4350 50  0001 C CNN
+F 3 " ~" H 6150 4350 50  0001 C CNN
+	1    6150 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 5DDFB63F
+P 6150 5050
+F 0 "#PWR0114" H 6150 4800 50  0001 C CNN
+F 1 "GND" H 6155 4877 50  0000 C CNN
+F 2 "" H 6150 5050 50  0001 C CNN
+F 3 "" H 6150 5050 50  0001 C CNN
+	1    6150 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4950 6150 5050
+$EndSCHEMATC

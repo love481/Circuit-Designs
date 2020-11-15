@@ -1,0 +1,774 @@
+EESchema Schematic File Version 4
+LIBS:RELAYR-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Prashant_library:6V_Relay Rly1
+U 1 1 5E2EAF8B
+P 3400 1850
+F 0 "Rly1" H 4030 2096 50  0000 L CNN
+F 1 "6V_Relay" H 4030 2005 50  0000 L CNN
+F 2 "modFiles:Relay_HLS_MEDIUM" H 4050 2000 50  0001 L CNN
+F 3 "" H 3600 1650 50  0000 C CNN
+	1    3400 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Prashant_library:6V_Relay Rly2
+U 1 1 5E2EAFBA
+P 5400 1825
+F 0 "Rly2" H 6030 2071 50  0000 L CNN
+F 1 "6V_Relay" H 6030 1980 50  0000 L CNN
+F 2 "modFiles:Relay_HLS_MEDIUM" H 6050 1975 50  0001 L CNN
+F 3 "" H 5600 1625 50  0000 C CNN
+	1    5400 1825
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5E2EB53E
+P 1650 1000
+F 0 "J1" H 1730 992 50  0000 L CNN
+F 1 "Conn_01x02" H 1730 901 50  0000 L CNN
+F 2 "modFiles:black screw terminal" H 1650 1000 50  0001 C CNN
+F 3 "~" H 1650 1000 50  0001 C CNN
+	1    1650 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5E2EB584
+P 1650 1425
+F 0 "J2" H 1730 1417 50  0000 L CNN
+F 1 "Conn_01x02" H 1730 1326 50  0000 L CNN
+F 2 "modFiles:black screw terminal" H 1650 1425 50  0001 C CNN
+F 3 "~" H 1650 1425 50  0001 C CNN
+	1    1650 1425
+	1    0    0    -1  
+$EndComp
+Text Label 1450 1000 2    50   ~ 0
+24V
+Wire Wire Line
+	1450 1100 1325 1100
+Wire Wire Line
+	1325 1425 1450 1425
+$Comp
+L Device:Fuse F1
+U 1 1 5E2EB634
+P 1000 1250
+F 0 "F1" V 1197 1250 50  0000 C CNN
+F 1 "Fuse" V 1106 1250 50  0000 C CNN
+F 2 "modFiles:Fuse_Holder" V 930 1250 50  0001 C CNN
+F 3 "~" H 1000 1250 50  0001 C CNN
+	1    1000 1250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1325 1100 1325 1250
+Wire Wire Line
+	1325 1250 1150 1250
+Connection ~ 1325 1250
+Wire Wire Line
+	1325 1250 1325 1425
+Text Label 850  1250 2    50   ~ 0
+12V
+$Comp
+L power:GND #PWR02
+U 1 1 5E2EB73E
+P 1450 1525
+F 0 "#PWR02" H 1450 1275 50  0001 C CNN
+F 1 "GND" H 1455 1352 50  0000 C CNN
+F 2 "" H 1450 1525 50  0001 C CNN
+F 3 "" H 1450 1525 50  0001 C CNN
+	1    1450 1525
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:DIODE D2
+U 1 1 5E2EB8DF
+P 2900 1650
+F 0 "D2" V 2946 1522 50  0000 R CNN
+F 1 "DIODE" V 2855 1522 50  0000 R CNN
+F 2 "modFiles:Diode_Medium" H 2900 1650 50  0001 C CNN
+F 3 "~" H 2900 1650 50  0001 C CNN
+	1    2900 1650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3400 1350 3400 1175
+Wire Wire Line
+	3400 1175 2900 1175
+Wire Wire Line
+	2900 1175 2900 1450
+Wire Wire Line
+	2900 1850 2900 2175
+Wire Wire Line
+	2900 2175 3400 2175
+$Comp
+L Transistor_BJT:TIP122 Q2
+U 1 1 5E2EBA74
+P 5300 2500
+F 0 "Q2" H 5507 2546 50  0000 L CNN
+F 1 "TIP122" H 5507 2455 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5500 2425 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 5300 2500 50  0001 L CNN
+	1    5300 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5E2EBAC5
+P 5400 2700
+F 0 "#PWR010" H 5400 2450 50  0001 C CNN
+F 1 "GND" H 5405 2527 50  0000 C CNN
+F 2 "" H 5400 2700 50  0001 C CNN
+F 3 "" H 5400 2700 50  0001 C CNN
+	1    5400 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP122 Q1
+U 1 1 5E2EBBAB
+P 3300 2550
+F 0 "Q1" H 3507 2596 50  0000 L CNN
+F 1 "TIP122" H 3507 2505 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3500 2475 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 3300 2550 50  0001 L CNN
+	1    3300 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5E2EBBB1
+P 3400 2750
+F 0 "#PWR04" H 3400 2500 50  0001 C CNN
+F 1 "GND" H 3405 2577 50  0000 C CNN
+F 2 "" H 3400 2750 50  0001 C CNN
+F 3 "" H 3400 2750 50  0001 C CNN
+	1    3400 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E2EBC2A
+P 2900 2700
+F 0 "R3" H 2970 2746 50  0000 L CNN
+F 1 "R" H 2970 2655 50  0000 L CNN
+F 2 "modFiles:Resistor_small" V 2830 2700 50  0001 C CNN
+F 3 "~" H 2900 2700 50  0001 C CNN
+	1    2900 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5E2EBE32
+P 5000 2650
+F 0 "R5" H 5070 2696 50  0000 L CNN
+F 1 "R" H 5070 2605 50  0000 L CNN
+F 2 "modFiles:Resistor_small" V 4930 2650 50  0001 C CNN
+F 3 "~" H 5000 2650 50  0001 C CNN
+	1    5000 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E2EBE6C
+P 2650 2550
+F 0 "R2" V 2443 2550 50  0000 C CNN
+F 1 "R" V 2534 2550 50  0000 C CNN
+F 2 "modFiles:Resistor_small" V 2580 2550 50  0001 C CNN
+F 3 "~" H 2650 2550 50  0001 C CNN
+	1    2650 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5E2EBEE8
+P 4750 2500
+F 0 "R4" V 4543 2500 50  0000 C CNN
+F 1 "R" V 4634 2500 50  0000 C CNN
+F 2 "modFiles:Resistor_small" V 4680 2500 50  0001 C CNN
+F 3 "~" H 4750 2500 50  0001 C CNN
+	1    4750 2500
+	0    1    1    0   
+$EndComp
+Text Label 2500 2550 2    50   ~ 0
+in1_1
+Text Label 4600 2500 2    50   ~ 0
+in1_2
+Wire Wire Line
+	2800 2550 2900 2550
+Connection ~ 2900 2550
+Wire Wire Line
+	2900 2550 3100 2550
+Wire Wire Line
+	4900 2500 5000 2500
+Connection ~ 5000 2500
+Wire Wire Line
+	5000 2500 5100 2500
+Wire Wire Line
+	5400 1925 5400 2150
+$Comp
+L power:GND #PWR012
+U 1 1 5E2EC2AE
+P 5900 1325
+F 0 "#PWR012" H 5900 1075 50  0001 C CNN
+F 1 "GND" H 5905 1152 50  0000 C CNN
+F 2 "" H 5900 1325 50  0001 C CNN
+F 3 "" H 5900 1325 50  0001 C CNN
+	1    5900 1325
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5E2EC2F0
+P 3900 1350
+F 0 "#PWR06" H 3900 1100 50  0001 C CNN
+F 1 "GND" H 3905 1177 50  0000 C CNN
+F 2 "" H 3900 1350 50  0001 C CNN
+F 3 "" H 3900 1350 50  0001 C CNN
+	1    3900 1350
+	-1   0    0    1   
+$EndComp
+Text Label 3725 1075 0    50   ~ 0
+24V
+Text Label 5700 1325 0    50   ~ 0
+24V
+$Comp
+L pspice:DIODE D3
+U 1 1 5E2EC393
+P 5000 1675
+F 0 "D3" V 5046 1547 50  0000 R CNN
+F 1 "DIODE" V 4955 1547 50  0000 R CNN
+F 2 "modFiles:Diode_Medium" H 5000 1675 50  0001 C CNN
+F 3 "~" H 5000 1675 50  0001 C CNN
+	1    5000 1675
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5000 1475 5000 1250
+Wire Wire Line
+	5000 1250 5400 1250
+Wire Wire Line
+	5400 1250 5400 1325
+Wire Wire Line
+	5000 1875 5000 2150
+Wire Wire Line
+	5000 2150 5400 2150
+Connection ~ 5400 2150
+Wire Wire Line
+	5400 2150 5400 2300
+Wire Wire Line
+	3400 1950 3400 2175
+Connection ~ 3400 2175
+Wire Wire Line
+	3400 2175 3400 2350
+$Comp
+L power:GND #PWR03
+U 1 1 5E2EC854
+P 2900 2850
+F 0 "#PWR03" H 2900 2600 50  0001 C CNN
+F 1 "GND" H 2905 2677 50  0000 C CNN
+F 2 "" H 2900 2850 50  0001 C CNN
+F 3 "" H 2900 2850 50  0001 C CNN
+	1    2900 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5E2EC8A5
+P 5000 2800
+F 0 "#PWR09" H 5000 2550 50  0001 C CNN
+F 1 "GND" H 5005 2627 50  0000 C CNN
+F 2 "" H 5000 2800 50  0001 C CNN
+F 3 "" H 5000 2800 50  0001 C CNN
+	1    5000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse F2
+U 1 1 5E2ECC14
+P 5800 2075
+F 0 "F2" H 5860 2121 50  0000 L CNN
+F 1 "Fuse" H 5860 2030 50  0000 L CNN
+F 2 "modFiles:Fuse_Holder" V 5730 2075 50  0001 C CNN
+F 3 "~" H 5800 2075 50  0001 C CNN
+	1    5800 2075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3725 1075 3700 1075
+Wire Wire Line
+	3700 1075 3700 1225
+Text Label 2900 1175 0    50   ~ 0
+12V
+Text Label 5000 1250 0    50   ~ 0
+12V
+Text Label 3800 1950 0    50   ~ 0
+out1_1
+Text Label 5800 2225 0    50   ~ 0
+out1_2
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5E2ED709
+P 4175 3700
+F 0 "J4" H 4255 3692 50  0000 L CNN
+F 1 "Conn_01x02" H 4255 3601 50  0000 L CNN
+F 2 "modFiles:black screw terminal" H 4175 3700 50  0001 C CNN
+F 3 "~" H 4175 3700 50  0001 C CNN
+	1    4175 3700
+	1    0    0    -1  
+$EndComp
+Text Label 3975 3700 2    50   ~ 0
+out1_1
+Text Label 3975 3800 2    50   ~ 0
+out1_2
+$Comp
+L Device:R R1
+U 1 1 5E2EDB1B
+P 1425 2925
+F 0 "R1" H 1495 2971 50  0000 L CNN
+F 1 "R" H 1495 2880 50  0000 L CNN
+F 2 "modFiles:Resistor_small" V 1355 2925 50  0001 C CNN
+F 3 "~" H 1425 2925 50  0001 C CNN
+	1    1425 2925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5E2EDB90
+P 1425 3225
+F 0 "D1" V 1463 3108 50  0000 R CNN
+F 1 "LED" V 1372 3108 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm" H 1425 3225 50  0001 C CNN
+F 3 "~" H 1425 3225 50  0001 C CNN
+	1    1425 3225
+	0    -1   -1   0   
+$EndComp
+Text Label 1425 2775 0    50   ~ 0
+12V
+$Comp
+L power:GND #PWR01
+U 1 1 5E2EDC99
+P 1425 3375
+F 0 "#PWR01" H 1425 3125 50  0001 C CNN
+F 1 "GND" H 1430 3202 50  0000 C CNN
+F 2 "" H 1425 3375 50  0001 C CNN
+F 3 "" H 1425 3375 50  0001 C CNN
+	1    1425 3375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Prashant_library:6V_Relay Rly3
+U 1 1 5E2EE063
+P 7825 4000
+F 0 "Rly3" H 8455 4246 50  0000 L CNN
+F 1 "6V_Relay" H 8455 4155 50  0000 L CNN
+F 2 "modFiles:Relay_HLS_MEDIUM" H 8475 4150 50  0001 L CNN
+F 3 "" H 8025 3800 50  0000 C CNN
+	1    7825 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Prashant_library:6V_Relay Rly4
+U 1 1 5E2EE069
+P 9825 3975
+F 0 "Rly4" H 10455 4221 50  0000 L CNN
+F 1 "6V_Relay" H 10455 4130 50  0000 L CNN
+F 2 "modFiles:Relay_HLS_MEDIUM" H 10475 4125 50  0001 L CNN
+F 3 "" H 10025 3775 50  0000 C CNN
+	1    9825 3975
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:DIODE D5
+U 1 1 5E2EE08F
+P 7325 3800
+F 0 "D5" V 7371 3672 50  0000 R CNN
+F 1 "DIODE" V 7280 3672 50  0000 R CNN
+F 2 "modFiles:Diode_Medium" H 7325 3800 50  0001 C CNN
+F 3 "~" H 7325 3800 50  0001 C CNN
+	1    7325 3800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7825 3500 7825 3325
+Wire Wire Line
+	7825 3325 7325 3325
+Wire Wire Line
+	7325 3325 7325 3600
+Wire Wire Line
+	7325 4000 7325 4325
+Wire Wire Line
+	7325 4325 7825 4325
+$Comp
+L Transistor_BJT:TIP122 Q4
+U 1 1 5E2EE09A
+P 9725 4650
+F 0 "Q4" H 9932 4696 50  0000 L CNN
+F 1 "TIP122" H 9932 4605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9925 4575 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9725 4650 50  0001 L CNN
+	1    9725 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5E2EE0A0
+P 9825 4850
+F 0 "#PWR017" H 9825 4600 50  0001 C CNN
+F 1 "GND" H 9830 4677 50  0000 C CNN
+F 2 "" H 9825 4850 50  0001 C CNN
+F 3 "" H 9825 4850 50  0001 C CNN
+	1    9825 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP122 Q3
+U 1 1 5E2EE0A6
+P 7725 4700
+F 0 "Q3" H 7932 4746 50  0000 L CNN
+F 1 "TIP122" H 7932 4655 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7925 4625 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 7725 4700 50  0001 L CNN
+	1    7725 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 5E2EE0AC
+P 7825 4900
+F 0 "#PWR014" H 7825 4650 50  0001 C CNN
+F 1 "GND" H 7830 4727 50  0000 C CNN
+F 2 "" H 7825 4900 50  0001 C CNN
+F 3 "" H 7825 4900 50  0001 C CNN
+	1    7825 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5E2EE0B2
+P 7325 4850
+F 0 "R8" H 7395 4896 50  0000 L CNN
+F 1 "R" H 7395 4805 50  0000 L CNN
+F 2 "modFiles:Resistor_small" V 7255 4850 50  0001 C CNN
+F 3 "~" H 7325 4850 50  0001 C CNN
+	1    7325 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5E2EE0B8
+P 9425 4800
+F 0 "R10" H 9495 4846 50  0000 L CNN
+F 1 "R" H 9495 4755 50  0000 L CNN
+F 2 "modFiles:Resistor_small" V 9355 4800 50  0001 C CNN
+F 3 "~" H 9425 4800 50  0001 C CNN
+	1    9425 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5E2EE0BE
+P 7075 4700
+F 0 "R7" V 6868 4700 50  0000 C CNN
+F 1 "R" V 6959 4700 50  0000 C CNN
+F 2 "modFiles:Resistor_small" V 7005 4700 50  0001 C CNN
+F 3 "~" H 7075 4700 50  0001 C CNN
+	1    7075 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5E2EE0C4
+P 9175 4650
+F 0 "R9" V 8968 4650 50  0000 C CNN
+F 1 "R" V 9059 4650 50  0000 C CNN
+F 2 "modFiles:Resistor_small" V 9105 4650 50  0001 C CNN
+F 3 "~" H 9175 4650 50  0001 C CNN
+	1    9175 4650
+	0    1    1    0   
+$EndComp
+Text Label 6925 4700 2    50   ~ 0
+in2_1
+Text Label 9025 4650 2    50   ~ 0
+in2_2
+Wire Wire Line
+	7225 4700 7325 4700
+Connection ~ 7325 4700
+Wire Wire Line
+	7325 4700 7525 4700
+Wire Wire Line
+	9325 4650 9425 4650
+Connection ~ 9425 4650
+Wire Wire Line
+	9425 4650 9525 4650
+Wire Wire Line
+	9825 4075 9825 4300
+$Comp
+L power:GND #PWR018
+U 1 1 5E2EE0D3
+P 10325 3475
+F 0 "#PWR018" H 10325 3225 50  0001 C CNN
+F 1 "GND" H 10330 3302 50  0000 C CNN
+F 2 "" H 10325 3475 50  0001 C CNN
+F 3 "" H 10325 3475 50  0001 C CNN
+	1    10325 3475
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5E2EE0D9
+P 8325 3500
+F 0 "#PWR015" H 8325 3250 50  0001 C CNN
+F 1 "GND" H 8330 3327 50  0000 C CNN
+F 2 "" H 8325 3500 50  0001 C CNN
+F 3 "" H 8325 3500 50  0001 C CNN
+	1    8325 3500
+	-1   0    0    1   
+$EndComp
+Text Label 8150 3225 0    50   ~ 0
+24V
+Text Label 10125 3475 0    50   ~ 0
+24V
+$Comp
+L pspice:DIODE D6
+U 1 1 5E2EE0E1
+P 9425 3825
+F 0 "D6" V 9471 3697 50  0000 R CNN
+F 1 "DIODE" V 9380 3697 50  0000 R CNN
+F 2 "modFiles:Diode_Medium" H 9425 3825 50  0001 C CNN
+F 3 "~" H 9425 3825 50  0001 C CNN
+	1    9425 3825
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9425 3625 9425 3400
+Wire Wire Line
+	9425 3400 9825 3400
+Wire Wire Line
+	9825 3400 9825 3475
+Wire Wire Line
+	9425 4025 9425 4300
+Wire Wire Line
+	9425 4300 9825 4300
+Connection ~ 9825 4300
+Wire Wire Line
+	9825 4300 9825 4450
+Wire Wire Line
+	7825 4100 7825 4325
+Connection ~ 7825 4325
+Wire Wire Line
+	7825 4325 7825 4500
+$Comp
+L power:GND #PWR013
+U 1 1 5E2EE0F1
+P 7325 5000
+F 0 "#PWR013" H 7325 4750 50  0001 C CNN
+F 1 "GND" H 7330 4827 50  0000 C CNN
+F 2 "" H 7325 5000 50  0001 C CNN
+F 3 "" H 7325 5000 50  0001 C CNN
+	1    7325 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 5E2EE0F7
+P 9425 4950
+F 0 "#PWR016" H 9425 4700 50  0001 C CNN
+F 1 "GND" H 9430 4777 50  0000 C CNN
+F 2 "" H 9425 4950 50  0001 C CNN
+F 3 "" H 9425 4950 50  0001 C CNN
+	1    9425 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse F3
+U 1 1 5E2EE0FD
+P 8225 4250
+F 0 "F3" H 8285 4296 50  0000 L CNN
+F 1 "Fuse" H 8285 4205 50  0000 L CNN
+F 2 "modFiles:Fuse_Holder" V 8155 4250 50  0001 C CNN
+F 3 "~" H 8225 4250 50  0001 C CNN
+	1    8225 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 3225 8125 3225
+Wire Wire Line
+	8125 3225 8125 3500
+Text Label 7325 3325 0    50   ~ 0
+12V
+Text Label 9425 3400 0    50   ~ 0
+12V
+Text Label 8225 4400 0    50   ~ 0
+out2_1
+Text Label 10225 4075 0    50   ~ 0
+out2_2
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5E2EE109
+P 8600 5850
+F 0 "J5" H 8680 5842 50  0000 L CNN
+F 1 "Conn_01x02" H 8680 5751 50  0000 L CNN
+F 2 "modFiles:black screw terminal" H 8600 5850 50  0001 C CNN
+F 3 "~" H 8600 5850 50  0001 C CNN
+	1    8600 5850
+	1    0    0    -1  
+$EndComp
+Text Label 8400 5850 2    50   ~ 0
+out2_1
+Text Label 8400 5950 2    50   ~ 0
+out2_2
+$Comp
+L Device:R R6
+U 1 1 5E2EE111
+P 5850 5075
+F 0 "R6" H 5920 5121 50  0000 L CNN
+F 1 "R" H 5920 5030 50  0000 L CNN
+F 2 "modFiles:Resistor_small" V 5780 5075 50  0001 C CNN
+F 3 "~" H 5850 5075 50  0001 C CNN
+	1    5850 5075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5E2EE117
+P 5850 5375
+F 0 "D4" V 5888 5258 50  0000 R CNN
+F 1 "LED" V 5797 5258 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm" H 5850 5375 50  0001 C CNN
+F 3 "~" H 5850 5375 50  0001 C CNN
+	1    5850 5375
+	0    -1   -1   0   
+$EndComp
+Text Label 5850 4925 0    50   ~ 0
+12V
+$Comp
+L power:GND #PWR011
+U 1 1 5E2EE11E
+P 5850 5525
+F 0 "#PWR011" H 5850 5275 50  0001 C CNN
+F 1 "GND" H 5855 5352 50  0000 C CNN
+F 2 "" H 5850 5525 50  0001 C CNN
+F 3 "" H 5850 5525 50  0001 C CNN
+	1    5850 5525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:DB9_Female_MountingHoles J3
+U 1 1 5E2F50AB
+P 4075 5125
+F 0 "J3" V 3948 5680 50  0000 L CNN
+F 1 "DB9_Female_MountingHoles" V 4039 5680 50  0000 L CNN
+F 2 "modFiles:Connector_DB_9" H 4075 5125 50  0001 C CNN
+F 3 " ~" H 4075 5125 50  0001 C CNN
+	1    4075 5125
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5E2F5CAC
+P 4075 4450
+F 0 "#PWR07" H 4075 4200 50  0001 C CNN
+F 1 "GND" H 4080 4277 50  0000 C CNN
+F 2 "" H 4075 4450 50  0001 C CNN
+F 3 "" H 4075 4450 50  0001 C CNN
+	1    4075 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3875 4825 3875 4450
+Wire Wire Line
+	3875 4450 4075 4450
+Wire Wire Line
+	4275 4450 4275 4825
+Connection ~ 4075 4450
+Wire Wire Line
+	4075 4450 4275 4450
+$Comp
+L power:GND #PWR08
+U 1 1 5E2F6CCD
+P 4075 4825
+F 0 "#PWR08" H 4075 4575 50  0001 C CNN
+F 1 "GND" H 4080 4652 50  0000 C CNN
+F 2 "" H 4075 4825 50  0001 C CNN
+F 3 "" H 4075 4825 50  0001 C CNN
+	1    4075 4825
+	-1   0    0    1   
+$EndComp
+Text Label 3975 4825 2    50   ~ 0
+in1_1
+Text Label 3775 4825 2    50   ~ 0
+in1_2
+Text Label 4375 4825 0    50   ~ 0
+in2_1
+Text Label 4175 4825 0    50   ~ 0
+in2_2
+$Comp
+L power:GND #PWR05
+U 1 1 5E2F700D
+P 3475 5125
+F 0 "#PWR05" H 3475 4875 50  0001 C CNN
+F 1 "GND" H 3480 4952 50  0000 C CNN
+F 2 "" H 3475 5125 50  0001 C CNN
+F 3 "" H 3475 5125 50  0001 C CNN
+	1    3475 5125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 1950 4350 1950
+Wire Wire Line
+	4550 1950 4550 1775
+Wire Wire Line
+	3700 1225 4550 1225
+Wire Wire Line
+	4550 1225 4550 1475
+Connection ~ 3700 1225
+Wire Wire Line
+	3700 1225 3700 1350
+$Comp
+L Device:C C?
+U 1 1 5E3D710A
+P 4550 1625
+F 0 "C?" H 4665 1671 50  0000 L CNN
+F 1 "C" H 4665 1580 50  0000 L CNN
+F 2 "" H 4588 1475 50  0001 C CNN
+F 3 "~" H 4550 1625 50  0001 C CNN
+	1    4550 1625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E3D9029
+P 4350 1625
+F 0 "C?" H 4465 1671 50  0000 L CNN
+F 1 "C" H 4465 1580 50  0000 L CNN
+F 2 "" H 4388 1475 50  0001 C CNN
+F 3 "~" H 4350 1625 50  0001 C CNN
+	1    4350 1625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 1350 4350 1350
+Wire Wire Line
+	4350 1350 4350 1475
+Connection ~ 3900 1350
+Wire Wire Line
+	4350 1775 4350 1950
+Connection ~ 4350 1950
+Wire Wire Line
+	4350 1950 4550 1950
+$EndSCHEMATC
